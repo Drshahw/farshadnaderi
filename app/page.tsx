@@ -15,10 +15,12 @@ const results = [
 const companies = ["Nestlé", "Shell", "Unilever", "Bayer", "Sanofi", "Novo Nordisk", "JTI", "BAT"];
 
 const connectLinks = [
-  { label: "YouTube", note: "Business insights and practical leadership content", href: "https://linktr.ee/farshadnaderi" },
-  { label: "LinkedIn", note: "Professional background, articles, and updates", href: "https://www.linkedin.com/in/farshadnaderi/" },
+  { label: "YouTube", note: "Business insights and practical leadership content", href: "https://youtube.com/@dr.farshadnaderi" },
+  { label: "LinkedIn", note: "Professional background, articles, and updates", href: "https://www.linkedin.com/in/farshadnaderi" },
+  { label: "Instagram", note: "Business, leadership, and personal updates", href: "https://www.instagram.com/farshadnaderi" },
+  { label: "X", note: "Short-form commentary and current observations", href: "https://x.com/farshadnaderi_" },
   { label: "Radman Consulting Group", note: "Consulting services and company profile", href: "https://radmangroup.com" },
-  { label: "Instagram · X · Telegram · WhatsApp", note: "All verified social and direct-contact links", href: "https://linktr.ee/farshadnaderi" }
+  { label: "Linktree", note: "All verified social and direct-contact links", href: "https://linktr.ee/farshadnaderi" }
 ];
 
 function ArrowIcon() {
@@ -40,7 +42,7 @@ export default function Home() {
           <a href="#results">Results</a>
           <a href="#connect">Connect</a>
         </nav>
-        <a className="navCta" href="mailto:farshadnaderi@gmail.com">Let&apos;s talk <ArrowIcon /></a>
+        <a className="navCta" href="mailto:fnaderi@radmangroup.com">Let&apos;s talk <ArrowIcon /></a>
       </header>
 
       <section className="hero shell" id="top">
@@ -61,7 +63,7 @@ export default function Home() {
             <p>As Founder and CEO of Radman Consulting Group, I have led business transformation, market-entry, operational improvement, and human-capital projects for local organizations and global companies.</p>
             <p>My approach combines strategic perspective with hands-on execution. I work closely with owners and investors, stay involved in critical decisions, and build systems that keep performing after the engagement ends.</p>
           </div>
-          <a className="textLink" href="https://www.linkedin.com/in/farshadnaderi/" target="_blank" rel="noreferrer">View LinkedIn profile <ArrowIcon /></a>
+          <a className="textLink" href="https://www.linkedin.com/in/farshadnaderi" target="_blank" rel="noreferrer">View LinkedIn profile <ArrowIcon /></a>
         </div>
       </section>
 
@@ -128,7 +130,6 @@ export default function Home() {
             </a>
           ))}
         </div>
-        <a className="linktreeButton" href="https://linktr.ee/farshadnaderi" target="_blank" rel="noreferrer">Open all verified links <ArrowIcon /></a>
       </section>
 
       <footer className="footer shell">
@@ -137,14 +138,14 @@ export default function Home() {
           <h2>Let&apos;s make it workable.</h2>
         </div>
         <div className="footerActions">
-          <a className="primaryButton" href="mailto:farshadnaderi@gmail.com">Start a conversation <ArrowIcon /></a>
-          <a href="tel:+971547011484">+971 54 701 1484</a>
-          <a href="mailto:farshadnaderi@gmail.com">farshadnaderi@gmail.com</a>
+          <a className="primaryButton" href="mailto:fnaderi@radmangroup.com">Start a conversation <ArrowIcon /></a>
+          <a href="tel:+971529765256">+971 52 976 5256</a>
+          <a href="mailto:fnaderi@radmangroup.com">fnaderi@radmangroup.com</a>
           <a href="https://linktr.ee/farshadnaderi" target="_blank" rel="noreferrer">All links</a>
         </div>
         <div className="footerBottom">
           <span>© {new Date().getFullYear()} Farshad Naderi</span>
-          <span>Business Advisor · Operator · Founder</span>
+          <span>CEO · Radman Consulting Group</span>
         </div>
       </footer>
     </main>
