@@ -14,6 +14,13 @@ const results = [
 
 const companies = ["Nestlé", "Shell", "Unilever", "Bayer", "Sanofi", "Novo Nordisk", "JTI", "BAT"];
 
+const connectLinks = [
+  { label: "YouTube", note: "Business insights and practical leadership content", href: "https://linktr.ee/farshadnaderi" },
+  { label: "LinkedIn", note: "Professional background, articles, and updates", href: "https://www.linkedin.com/in/farshadnaderi/" },
+  { label: "Radman Consulting Group", note: "Consulting services and company profile", href: "https://radmangroup.com" },
+  { label: "Instagram · X · Telegram · WhatsApp", note: "All verified social and direct-contact links", href: "https://linktr.ee/farshadnaderi" }
+];
+
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -31,6 +38,7 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#expertise">Expertise</a>
           <a href="#results">Results</a>
+          <a href="#connect">Connect</a>
         </nav>
         <a className="navCta" href="mailto:farshadnaderi@gmail.com">Let&apos;s talk <ArrowIcon /></a>
       </header>
@@ -39,7 +47,7 @@ export default function Home() {
         <div className="heroKicker"><span /> Dubai, United Arab Emirates</div>
         <h1>Building businesses<br />that <em>work.</em></h1>
         <div className="heroBottom">
-          <p>I help entrepreneurs and investors acquire, build, transform, and operate businesses in the UAE.</p>
+          <p>20+ years of management consulting, focused on helping entrepreneurs and investors scale small businesses in the UAE.</p>
           <a className="circleLink" href="#about" aria-label="Explore profile"><ArrowIcon /></a>
         </div>
         <div className="heroRule" />
@@ -103,6 +111,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="connect shell" id="connect">
+        <div className="sectionLabel">04 / Connect & follow</div>
+        <div className="connectHeading">
+          <h2>Ideas, insights, and direct ways to connect.</h2>
+          <p>I share practical thoughts on business growth, leadership, operating in the UAE, and the realities behind building a stronger company.</p>
+        </div>
+        <div className="connectList">
+          {connectLinks.map((link) => (
+            <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+              <div>
+                <strong>{link.label}</strong>
+                <span>{link.note}</span>
+              </div>
+              <ArrowIcon />
+            </a>
+          ))}
+        </div>
+        <a className="linktreeButton" href="https://linktr.ee/farshadnaderi" target="_blank" rel="noreferrer">Open all verified links <ArrowIcon /></a>
+      </section>
+
       <footer className="footer shell">
         <div>
           <p>Have a business challenge in mind?</p>
@@ -112,6 +140,7 @@ export default function Home() {
           <a className="primaryButton" href="mailto:farshadnaderi@gmail.com">Start a conversation <ArrowIcon /></a>
           <a href="tel:+971547011484">+971 54 701 1484</a>
           <a href="mailto:farshadnaderi@gmail.com">farshadnaderi@gmail.com</a>
+          <a href="https://linktr.ee/farshadnaderi" target="_blank" rel="noreferrer">All links</a>
         </div>
         <div className="footerBottom">
           <span>© {new Date().getFullYear()} Farshad Naderi</span>
