@@ -95,15 +95,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="portraitFrame">
-            <Image
-              src="/images/farshad-naderi.jpg"
-              alt="Portrait of Farshad Naderi"
-              fill
-              priority
-              sizes="(min-width: 1024px) 52vw, 100vw"
-              className="portrait"
-            />
+          <div className="heroVisual">
+            <div className="portraitNavyPanel" aria-hidden="true" />
+            <div className="portraitFrame">
+              <Image
+                src="/images/farshad-naderi.jpg"
+                alt="Portrait of Farshad Naderi"
+                fill
+                priority
+                sizes="(min-width: 1024px) 52vw, 100vw"
+                className="portrait"
+              />
+            </div>
           </div>
         </section>
 

@@ -11,7 +11,8 @@
 - Typography matches the corporate system: Newsreader for display type and Manrope for UI and body copy.
 - Color tokens match the corporate navy, blue, warm-white, line, and yellow action palette.
 - Header, navigation density, section rhythm, rule treatment, button style, and footer structure follow the corporate site.
-- The profile-specific split hero preserves the corporate page language while giving the portrait the required prominence.
+- The selected split-hero mockup is implemented: editorial profile copy remains on the warm-white left panel, while the portrait sits in a clean right panel with a deep-navy field and action-yellow baseline.
+- The profile-specific hero preserves the corporate page language while giving the portrait the required prominence.
 - Portrait is sharp, uncropped at the head and shoulders, and scales cleanly on desktop and mobile.
 - Organization marks use real logo assets, are consistently sized, and remain legible on the navy panel.
 
@@ -30,6 +31,7 @@
 - Production build completes successfully with linting and TypeScript validation.
 - Desktop and mobile screenshots show no horizontal overflow.
 - Browser verification reports no console errors on the implementation.
+- Desktop visual verification confirms the redesigned hero at 1440 px; mobile verification confirms the stacked portrait treatment at 390 px.
 - Social-link count is four at both tested viewports.
 - Exposed-contact scan returns no email addresses, phone numbers, or WhatsApp links.
 
