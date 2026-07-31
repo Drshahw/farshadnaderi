@@ -13,7 +13,8 @@
 - Header, navigation density, section rhythm, rule treatment, button style, and footer structure follow the corporate site.
 - The selected split-hero mockup is implemented: editorial profile copy remains on the warm-white left panel, while the portrait sits in a clean right panel with a deep-navy field and action-yellow baseline.
 - The profile-specific hero preserves the corporate page language while giving the portrait the required prominence.
-- Portrait is sharp, uncropped at the head and shoulders, and scales cleanly on desktop and mobile.
+- Hero uses the approved 1095 × 1436 high-resolution portrait asset with its warm editorial backdrop; the previous square white-background asset is no longer used in the page or social metadata.
+- Portrait remains sharp, keeps the full head visible, and uses deliberate desktop and mobile crops.
 - Organization marks use real logo assets, are consistently sized, and remain legible on the navy panel.
 
 ## Content and interaction checks

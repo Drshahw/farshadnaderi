@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     type: "profile",
     title: "Farshad Naderi | Founder & Managing Director",
     description,
-    images: ["/images/farshad-naderi.jpg"],
+    images: ["/images/farshad-naderi-hero.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Farshad Naderi | Founder & Managing Director",
     description,
-    images: ["/images/farshad-naderi.jpg"],
+    images: ["/images/farshad-naderi-hero.png"],
   },
 };
 

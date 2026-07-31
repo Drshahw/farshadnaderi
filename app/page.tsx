@@ -99,7 +99,7 @@ export default function Home() {
             <div className="portraitNavyPanel" aria-hidden="true" />
             <div className="portraitFrame">
               <Image
-                src="/images/farshad-naderi.jpg"
+                src="/images/farshad-naderi-hero.png"
                 alt="Portrait of Farshad Naderi"
                 fill
                 priority
