@@ -1,9 +1,30 @@
 import type { Metadata } from "next";
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/600.css";
+import "@fontsource/manrope/700.css";
+import "@fontsource/newsreader/400.css";
+import "@fontsource/newsreader/500.css";
 import "./globals.css";
 
+const description =
+  "Farshad Naderi is the Founder and Managing Director of Radman Consulting Group, with capabilities spanning AI strategy, business transformation, organizational systems, and executive leadership.";
+
 export const metadata: Metadata = {
-  title: "Farshad Naderi | Business Advisor & Operator",
-  description: "Farshad Naderi helps entrepreneurs and investors acquire, build, transform, and operate businesses in the UAE."
+  metadataBase: new URL("https://farshadnaderi.vercel.app"),
+  title: "Farshad Naderi | Founder & Managing Director",
+  description,
+  openGraph: {
+    type: "profile",
+    title: "Farshad Naderi | Founder & Managing Director",
+    description,
+    images: ["/images/farshad-naderi.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Farshad Naderi | Founder & Managing Director",
+    description,
+    images: ["/images/farshad-naderi.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

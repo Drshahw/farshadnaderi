@@ -1,153 +1,247 @@
-const capabilities = [
-  { number: "01", title: "Business Acquisition", text: "Identify, evaluate, negotiate, and integrate the right UAE business with disciplined due diligence." },
-  { number: "02", title: "UAE Market Entry", text: "Turn expansion plans into compliant, operational businesses with local execution and global standards." },
-  { number: "03", title: "Business Transformation", text: "Improve operating models, management systems, teams, and performance to create sustainable growth." },
-  { number: "04", title: "Human Capital", text: "Build practical HR systems, leadership capability, and organizational structures that support the strategy." }
+import Image from "next/image";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
+import { HiArrowRight, HiArrowUpRight } from "react-icons/hi2";
+
+const corporateSite = "https://radman-website.vercel.app";
+
+const organizations = [
+  { name: "Nestlé", src: "/logos/nestle.svg", width: 148, height: 44 },
+  { name: "Shell", src: "/logos/shell.svg", width: 140, height: 44 },
+  { name: "Unilever", src: "/logos/unilever.svg", width: 148, height: 44 },
+  { name: "Bayer", src: "/logos/bayer.svg", width: 64, height: 64 },
+  { name: "Sanofi", src: "/logos/sanofi.svg", width: 148, height: 44 },
+  { name: "Novo Nordisk", src: "/logos/novo-nordisk.svg", width: 148, height: 64 },
+  { name: "JTI", src: "/logos/jti.svg", width: 96, height: 64 },
+  { name: "BAT", src: "/logos/bat.svg", width: 148, height: 54 },
 ];
 
-const results = [
-  ["20+", "Years leading and transforming businesses"],
-  ["30+", "HR policy and compensation projects"],
-  ["1,000+", "Days of executive and professional training"],
-  ["$8M", "Commercial receivable recovery led across borders"]
+const socialLinks = [
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@dr.farshadnaderi",
+    icon: FaYoutube,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/farshadnaderi",
+    icon: FaLinkedinIn,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/farshadnaderi",
+    icon: FaInstagram,
+  },
+  {
+    label: "X",
+    href: "https://x.com/farshadnaderi_",
+    icon: FaXTwitter,
+  },
 ];
-
-const companies = ["Nestlé", "Shell", "Unilever", "Bayer", "Sanofi", "Novo Nordisk", "JTI", "BAT"];
-
-const connectLinks = [
-  { label: "YouTube", note: "Business insights and practical leadership content", href: "https://youtube.com/@dr.farshadnaderi" },
-  { label: "LinkedIn", note: "Professional background, articles, and updates", href: "https://www.linkedin.com/in/farshadnaderi" },
-  { label: "Instagram", note: "Business, leadership, and personal updates", href: "https://www.instagram.com/farshadnaderi" },
-  { label: "X", note: "Short-form commentary and current observations", href: "https://x.com/farshadnaderi_" },
-  { label: "Radman Consulting Group", note: "Consulting services and company profile", href: "https://radmangroup.com" },
-  { label: "Linktree", note: "All verified social and direct-contact links", href: "https://linktr.ee/farshadnaderi" }
-];
-
-function ArrowIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M5 12h14M13 6l6 6-6 6" />
-    </svg>
-  );
-}
 
 export default function Home() {
   return (
-    <main>
-      <header className="nav shell">
-        <a className="brand" href="#top" aria-label="Farshad Naderi home">FN<span>.</span></a>
-        <nav aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#expertise">Expertise</a>
-          <a href="#results">Results</a>
-          <a href="#connect">Connect</a>
-        </nav>
-        <a className="navCta" href="mailto:fnaderi@radmangroup.com">Let&apos;s talk <ArrowIcon /></a>
+    <>
+      <header className="siteHeader">
+        <div className="siteContainer headerInner">
+          <a
+            className="brandLockup"
+            href={corporateSite}
+            aria-label="Radman Consulting Group home"
+          >
+            <Image src="/brand-icon.png" alt="" width={44} height={44} priority />
+            <span>Radman Consulting Group</span>
+          </a>
+
+          <nav className="desktopNav" aria-label="Primary navigation">
+            <a href={`${corporateSite}/services`}>Services</a>
+            <a
+              href={`${corporateSite}/services/business-os-technology-operations-implementation`}
+            >
+              Business OS
+            </a>
+            <a href={`${corporateSite}/insights`}>Insights</a>
+            <a href={`${corporateSite}/about`}>About</a>
+            <a href={`${corporateSite}/contact`}>Contact</a>
+          </nav>
+
+          <a className="headerReturn" href={corporateSite}>
+            Back to Radman <HiArrowRight aria-hidden="true" />
+          </a>
+        </div>
       </header>
 
-      <section className="hero shell" id="top">
-        <div className="heroKicker"><span /> Dubai, United Arab Emirates</div>
-        <h1>Building businesses<br />that <em>work.</em></h1>
-        <div className="heroBottom">
-          <p>20+ years of management consulting, focused on helping entrepreneurs and investors scale small businesses in the UAE.</p>
-          <a className="circleLink" href="#about" aria-label="Explore profile"><ArrowIcon /></a>
-        </div>
-        <div className="heroRule" />
-      </section>
-
-      <section className="intro shell" id="about">
-        <div className="sectionLabel">01 / About</div>
-        <div className="introContent">
-          <p className="lead">I&apos;m <strong>Farshad Naderi</strong> — a business advisor, operator, and founder with more than two decades of experience turning complex challenges into practical, measurable outcomes.</p>
-          <div className="introGrid">
-            <p>As Founder and CEO of Radman Consulting Group, I have led business transformation, market-entry, operational improvement, and human-capital projects for local organizations and global companies.</p>
-            <p>My approach combines strategic perspective with hands-on execution. I work closely with owners and investors, stay involved in critical decisions, and build systems that keep performing after the engagement ends.</p>
+      <main id="main-content">
+        <section className="hero" aria-labelledby="profile-title">
+          <div className="heroCopy">
+            <div className="heroCopyInner">
+              <p className="eyebrow">Leadership</p>
+              <h1 id="profile-title">Farshad Naderi</h1>
+              <p className="role">
+                Founder &amp; Managing Director
+                <span>Radman Consulting Group</span>
+              </p>
+              <p className="heroStatement">
+                Strategic leadership shaped by business transformation,
+                organizational systems, and applied AI.
+              </p>
+              <a className="profileLink" href="#profile">
+                View profile <HiArrowRight aria-hidden="true" />
+              </a>
+            </div>
           </div>
-          <a className="textLink" href="https://www.linkedin.com/in/farshadnaderi" target="_blank" rel="noreferrer">View LinkedIn profile <ArrowIcon /></a>
-        </div>
-      </section>
 
-      <section className="expertise" id="expertise">
-        <div className="shell">
-          <div className="sectionLabel light">02 / Expertise</div>
-          <div className="expertiseHeading">
-            <h2>Where strategy meets execution.</h2>
-            <p>Focused advisory for investors, founders, and leaders who need clarity, local knowledge, and reliable implementation.</p>
+          <div className="portraitFrame">
+            <Image
+              src="/images/farshad-naderi.jpg"
+              alt="Portrait of Farshad Naderi"
+              fill
+              priority
+              sizes="(min-width: 1024px) 52vw, 100vw"
+              className="portrait"
+            />
           </div>
-          <div className="capabilityList">
-            {capabilities.map((item) => (
-              <article key={item.number}>
-                <span>{item.number}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <ArrowIcon />
-              </article>
-            ))}
+        </section>
+
+        <section className="profileSection" id="profile" aria-labelledby="profile-heading">
+          <div className="contentContainer profileGrid">
+            <div>
+              <p className="eyebrow">Executive profile</p>
+              <h2 id="profile-heading">Strategy, systems, and technology.</h2>
+            </div>
+            <div className="profileBody">
+              <p>
+                Farshad Naderi is the Founder and Managing Director of Radman
+                Consulting Group. His capabilities span AI strategy and business
+                integration, AI-native operating models, multi-model and agentic
+                workflows, business transformation, organizational and human
+                capital systems, and executive leadership.
+              </p>
+              <p>
+                He combines strategic thinking with hands-on execution and
+                venture-building experience, translating complex ideas into
+                workable structures and accountable action. He holds a Doctorate
+                in Business Administration from the University of Bordeaux,
+                France, and an MBA from Royal Roads University, Canada.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="results shell" id="results">
-        <div className="sectionLabel">03 / Selected results</div>
-        <div className="resultsGrid">
-          {results.map(([value, label]) => (
-            <article key={value}>
-              <strong>{value}</strong>
-              <p>{label}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="companies shell">
-        <p>Organizations supported through Radman engagements</p>
-        <div>{companies.map((company) => <span key={company}>{company}</span>)}</div>
-      </section>
-
-      <section className="focus shell">
-        <div className="focusCard">
-          <div className="sectionLabel light">Current focus</div>
-          <h2>Entering the UAE should feel ambitious — not uncertain.</h2>
-          <p>Today, my primary focus is helping investors and entrepreneurs acquire established businesses and operate UAE ventures with confidence, transparency, and strong local execution.</p>
-          <a href="https://radmangroup.com" target="_blank" rel="noreferrer">Explore Radman Consulting Group <ArrowIcon /></a>
-        </div>
-      </section>
-
-      <section className="connect shell" id="connect">
-        <div className="sectionLabel">04 / Connect & follow</div>
-        <div className="connectHeading">
-          <h2>Ideas, insights, and direct ways to connect.</h2>
-          <p>I share practical thoughts on business growth, leadership, operating in the UAE, and the realities behind building a stronger company.</p>
-        </div>
-        <div className="connectList">
-          {connectLinks.map((link) => (
-            <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+        <section className="organizationsSection" aria-labelledby="organizations-heading">
+          <div className="contentContainer">
+            <div className="sectionIntro">
               <div>
-                <strong>{link.label}</strong>
-                <span>{link.note}</span>
+                <p className="eyebrow eyebrowLight">Selected experience</p>
+                <h2 id="organizations-heading">Organizations supported.</h2>
               </div>
-              <ArrowIcon />
-            </a>
-          ))}
-        </div>
-      </section>
+              <p>
+                Selected organizations supported through consulting and advisory
+                engagements.
+              </p>
+            </div>
 
-      <footer className="footer shell">
-        <div>
-          <p>Have a business challenge in mind?</p>
-          <h2>Let&apos;s make it workable.</h2>
+            <div className="logoGrid">
+              {organizations.map((organization) => (
+                <div className="logoCell" key={organization.name}>
+                  <Image
+                    src={organization.src}
+                    alt={`${organization.name} logo`}
+                    width={organization.width}
+                    height={organization.height}
+                    className="organizationLogo"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="connectSection" id="connect" aria-labelledby="connect-heading">
+          <div className="contentContainer connectGrid">
+            <div>
+              <p className="eyebrow">Connect &amp; follow</p>
+              <h2 id="connect-heading">Ideas, perspective, and professional updates.</h2>
+            </div>
+
+            <div className="socialGrid" aria-label="Social profiles">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a key={label} href={href} target="_blank" rel="noreferrer">
+                  <span className="socialIcon" aria-hidden="true">
+                    <Icon />
+                  </span>
+                  <span>{label}</span>
+                  <HiArrowUpRight className="socialArrow" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="contactCta" aria-labelledby="contact-heading">
+          <div className="contentContainer contactCtaInner">
+            <div>
+              <p className="eyebrow eyebrowLight">A clear first step</p>
+              <h2 id="contact-heading">Continue the conversation with Radman.</h2>
+              <p>
+                Use the secure inquiry form to share the context and request a
+                conversation.
+              </p>
+            </div>
+            <a className="primaryButton" href={`${corporateSite}/contact#secure-inquiry`}>
+              Send a secure inquiry <HiArrowRight aria-hidden="true" />
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="siteFooter">
+        <div className="contentContainer footerGrid">
+          <div className="footerBrand">
+            <a className="brandLockup footerBrandLockup" href={corporateSite}>
+              <Image src="/brand-icon.png" alt="" width={44} height={44} />
+              <span>Radman Consulting Group</span>
+            </a>
+            <p>
+              Local execution, operational systems, and senior advisory for UAE
+              businesses.
+            </p>
+          </div>
+
+          <nav aria-label="Footer navigation">
+            <p className="footerLabel">Explore</p>
+            <a href={`${corporateSite}/services`}>All Services</a>
+            <a href={`${corporateSite}/insights`}>Insights</a>
+            <a href={`${corporateSite}/about`}>About</a>
+            <a href={`${corporateSite}/contact`}>Contact</a>
+          </nav>
+
+          <div>
+            <p className="footerLabel">Start a conversation</p>
+            <address>
+              Al Asmawi Building, Sheikh Zayed Rd, Umm Al Sheif, Dubai
+            </address>
+            <a className="footerInquiry" href={`${corporateSite}/contact#secure-inquiry`}>
+              Send a secure inquiry
+            </a>
+            <p className="privacyNote">
+              Request a callback through the form without publishing contact
+              details.
+            </p>
+          </div>
         </div>
-        <div className="footerActions">
-          <a className="primaryButton" href="mailto:fnaderi@radmangroup.com">Start a conversation <ArrowIcon /></a>
-          <a href="tel:+971529765256">+971 52 976 5256</a>
-          <a href="mailto:fnaderi@radmangroup.com">fnaderi@radmangroup.com</a>
-          <a href="https://linktr.ee/farshadnaderi" target="_blank" rel="noreferrer">All links</a>
-        </div>
+
         <div className="footerBottom">
-          <span>© {new Date().getFullYear()} Farshad Naderi</span>
-          <span>CEO · Radman Consulting Group</span>
+          <div className="contentContainer footerBottomInner">
+            <span>© {new Date().getFullYear()} Radman Consulting Group</span>
+            <span>Farshad Naderi · Founder &amp; Managing Director</span>
+          </div>
         </div>
       </footer>
-    </main>
+    </>
   );
 }
